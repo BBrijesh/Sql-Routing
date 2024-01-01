@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heloo ejs</h1>
+
+<form  method="post">
+
+    <label>name : -</label>
+    <input type="text" name="name"> <br> <br>
+
+    <label>email : -</label>
+    <input type="email" name="email" > <br> <br>
+
+    <label>password : -</label>
+    <input type="password" name="password" > <br><br>
+
+    <input type="submit" name="save" >
+
+</form> <br>
+
+<table border="">
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>password</th>
+    <th>Delete</th>
+
+    <% result.forEach(function(table1){ %>
+        <tr>
+            <td><%= table1.id %></td>
+            <td><%= table1.name %></td>
+            <td><%= table1.email %></td>
+            <td><%= table1.password %></td>
+            <td><a href="/delete/<%= table1.id %>">Delete</a></td>
+        </tr>
+
+    <% })%>
+</table>
+
+</body>
+</html>
